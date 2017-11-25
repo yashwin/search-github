@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { searchGithubRepos } from '../Actions/SearchGithubReposAction';
 import { searchGithubUsers } from '../Actions/SearchGithubUsersAction';
-import { Table, Form, FormGroup, Col, ControlLabel, FormControl, Radio, Button, Grid, Row } from 'react-bootstrap';
+import { Form, FormGroup, Col, ControlLabel, FormControl, Radio, Button, Grid, Row } from 'react-bootstrap';
 
 class HomePage extends Component {
   constructor(props) {

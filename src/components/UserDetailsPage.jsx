@@ -1,15 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { FieldGroup, Table, Form, FormGroup, Col, FormControl, Button, ControlLabel } from 'react-bootstrap';
+import { FormGroup, Col,Button} from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { getUserRepos } from '../Actions/GetUserReposAction';
 
 class UserDetailsPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   goBack = (e) => {
     this.props.history.goBack();
   };

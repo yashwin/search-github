@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { FieldGroup, Table, Form, FormGroup, Col, FormControl, Button, ControlLabel } from 'react-bootstrap';
+import { FormGroup, Col, FormControl, Button, ControlLabel } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { getRepoOpenIssues } from '../Actions/GetRepoOpenIssuesAction';
 import { getRepoLabels } from '../Actions/GetRepoLabelsAction';
 import { getFilteredIssues } from '../Actions/GetFilteredIssuesAction';
@@ -23,7 +21,7 @@ class RepoDetailsPage extends React.Component {
     var repoUrl = this.props.location.state.repo.url;
     var label = this.inputEl.value
     this.setState({ label: label });
-    if(label == "all") {
+    if(label === "all") {
       this.props.getRepoOpenIssues(repoUrl);
     }
     else {
