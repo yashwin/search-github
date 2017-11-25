@@ -26,3 +26,64 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.heading-1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 30px
+}
+
+.search-container .form-horizontal {
+  box-shadow: 0 0 5px #ccc;
+  padding: 20px;
+  margin: auto;
+  width: 300px
+}
+
+.box-section {
+  margin: 20px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.box-section .title {
+  text-align: center;
+  background-color: grey;
+  color: #fff;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+a:hover {
+  text-decoration: none!important;
+}
+
+.box-image {
+  width: 100%;
+}
+
+.box-container {
+  margin-top: 50px
+}
+
+.heading {
+  font-size: 20px;
+  margin: 20px
+}
+
+ul.lists {
+  list-style-type: square;
+}
+
+ul.lists li {
+  font-size: 14px
+}
+
+.filter-issues select {
+  width: 20%
+}
+
+.go-back {
+  margin-left: 20px
+}
