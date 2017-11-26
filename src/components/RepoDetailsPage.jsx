@@ -62,9 +62,14 @@ class RepoDetailsPage extends React.Component {
         <Col sm={12}>
           <ul className="lists">
           {
+            issues.length > 0 &&
             issues.map((issue) => (
               <li>{issue.title}</li>
             ))
+          }
+          {
+            issues.length === 0 &&
+            <div>No Issues</div>
           }
           </ul>
         </Col>

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { getUserRepos } from '../Actions/GetUserReposAction';
 
 class UserDetailsPage extends React.Component {
-  
+
   goBack = (e) => {
     this.props.history.goBack();
   };
@@ -24,9 +24,14 @@ class UserDetailsPage extends React.Component {
         <div className="heading">List of Repos: {user.name}</div>
         <ul className="lists">
         {
+          repos.length > 0 &&
           repos.map((repo) => (
             <li>{repo.title}</li>
           ))
+        }
+        {
+          repos.length === 0 &&
+          <div>No Repos</div>
         }
         </ul>
         <div className="go-back">
