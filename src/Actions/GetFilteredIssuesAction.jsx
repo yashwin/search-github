@@ -7,6 +7,7 @@ export function getFilteredIssues(label,repo) {
       .then((response) => {
         const allFileredIssues = response.data.items;
         const allFileredIssuesData = allFileredIssues.map((issue) => ({
+          id: issue.id,
           title: issue.title,
           username: issue.user.login
         }));

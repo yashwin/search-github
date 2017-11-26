@@ -7,6 +7,7 @@ export function getUserRepos(url) {
       .then((response) => {
         const allUserRepos = response.data;
         const allUserReposData = allUserRepos.map((repo) => ({
+          id: repo.id,
           title: repo.name
         }));
         dispatch(getUserReposSuccess(allUserReposData));

@@ -53,7 +53,7 @@ class RepoDetailsPage extends React.Component {
               <option value="all">All issues</option>
               {
                 labels.map((label) => (
-                  <option value={label.name}>{label.name}</option>
+                  <option key={label.id} value={label.name}>{label.name}</option>
                 ))
               }
             </FormControl>
@@ -64,7 +64,7 @@ class RepoDetailsPage extends React.Component {
           {
             issues.length > 0 &&
             issues.map((issue) => (
-              <li>{issue.title}</li>
+              <li key={issue.id}>{issue.title}</li>
             ))
           }
           {

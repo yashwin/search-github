@@ -79,7 +79,7 @@ class HomePage extends Component {
           <Row className="show-grid">
             {
               repos.map((repo) => (
-                <Col sm={3}>
+                <Col key={repo.id} sm={3}>
                   <Link to={{ pathname: `/repo/${repo.name}`, state: { repo: repo } }}>
                     <div className="box-section">
                       <div className="title">{repo.name}</div>
@@ -93,7 +93,7 @@ class HomePage extends Component {
           <Row className="show-grid">
             {
               users.map((user) => (
-                <Col sm={3}>
+                <Col key={user.id} sm={3}>
                   <Link to={{ pathname: `/user/${user.name}`, state: { user: user } }}>
                     <div className="box-section">
                       <div className="title">{user.name}</div>

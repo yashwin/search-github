@@ -7,6 +7,7 @@ export function getRepoOpenIssues(url) {
       .then((response) => {
         const allIssues = response.data;
         const allIssuesData = allIssues.map((issue) => ({
+          id: issue.id,
           title: issue.title,
           username: issue.user.login
         }));

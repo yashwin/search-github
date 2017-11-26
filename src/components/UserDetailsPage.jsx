@@ -26,7 +26,7 @@ class UserDetailsPage extends React.Component {
         {
           repos.length > 0 &&
           repos.map((repo) => (
-            <li>{repo.title}</li>
+            <li key={repo.id}>{repo.title}</li>
           ))
         }
         {

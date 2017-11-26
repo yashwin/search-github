@@ -7,6 +7,7 @@ export function getRepoLabels(url) {
       .then((response) => {
         const allLabels = response.data;
         const allLabelsData = allLabels.map((label) => ({
+          id: label.id,
           name: label.name
         }));
         dispatch(getRepoLabelsSuccess(allLabelsData));
